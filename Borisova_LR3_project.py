@@ -12,7 +12,16 @@ def input_X():
         return None    
 
 def input_N():
-    return
+    while True:
+        try:
+            N = int(input("Введите цифру N (1 или 2 т.к. должно быть меньше числа разрядов X): "))
+            if 1 <= N <= 2:
+                print(f"Цифра N = {N} успешно сохранена!")
+                return N  
+            else:
+                print("Ошибка! N должно быть 1 или 2")
+        except:
+            print("Ошибка! Введите число 1 или 2")
 
 def find_first_cif():
     return
@@ -32,7 +41,7 @@ while True:
     if a == "1":
         X = input_X()
     elif a == "2":
-        input_N()
+        N = input_N()
     elif a == "3":
         find_first_cif()
     elif a == "4":
