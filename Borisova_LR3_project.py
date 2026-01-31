@@ -32,8 +32,12 @@ def find_first_cif():
         print("X не введено!")
 
 def find_nn_cif():
-    return
-
+    try:
+        cifs_str = str(abs(X))
+        print(f"{N}-я цифра числа {X} (справа налево) = {cifs_str[-N]}")
+    except:
+        print("Ошибка! Сначала введите число X и цифру N (1 или 2)")
+    
 while True:
     print("1. Ввести целое трехзначное число X")
     print("2. Ввести цифру N (которая меньше числа разрядов числа X)")
