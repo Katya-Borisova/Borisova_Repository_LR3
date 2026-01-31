@@ -24,7 +24,12 @@ def input_N():
             print("Ошибка! Введите число 1 или 2")
 
 def find_first_cif():
-    return
+    try:
+        abs_X = abs(X)
+        first_cif = abs_X // 100
+        print(f"Первая цифра числа {X} = {first_cif}")
+    except:
+        print("X не введено!")
 
 def find_nn_cif():
     return
