@@ -1,5 +1,15 @@
 def input_X():
-    return
+    try:
+        X = int(input("Введите трехзначное число X: "))
+        if 100 <= abs(X) <= 999:
+            print(f"Число {X} успешно сохранено")
+            return X
+        else:
+            print("Ошибка! Число должно быть трехзначным (от 100 до 999 или от -999 до -100)")
+            return None
+    except:
+        print("Ошибка! Введите целое число")
+        return None    
 
 def input_N():
     return
@@ -20,7 +30,7 @@ while True:
     
     a = input("Введите номер выбранного действия: ")
     if a == "1":
-        input_X()
+        X = input_X()
     elif a == "2":
         input_N()
     elif a == "3":
